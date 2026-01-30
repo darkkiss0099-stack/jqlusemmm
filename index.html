@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DEDKORDON - Members Roster</title>
+    <title>BLACK WHITE - Members Roster</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Space+Mono:wght@400;700&family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
     
@@ -19,7 +19,7 @@
             position: relative;
         }
 
-        /* --- Rain Animation Background --- */
+        /* --- Rain Animation --- */
         .rain {
             position: fixed;
             top: 0;
@@ -32,7 +32,7 @@
 
         .drop {
             position: absolute;
-            background: linear-gradient(transparent, rgba(255, 255, 255, 0.2));
+            background: linear-gradient(transparent, rgba(255, 255, 255, 0.1));
             width: 1px;
             height: 80px;
             top: -100px;
@@ -65,6 +65,7 @@
             letter-spacing: 12px;
             margin: 0;
             text-transform: uppercase;
+            text-shadow: 0 0 20px rgba(255,255,255,0.1);
         }
 
         .main-header .sub-text {
@@ -83,7 +84,7 @@
 
         .main-header h2 {
             font-size: 1rem;
-            color: #444;
+            color: #666;
             letter-spacing: 6px;
             margin: 0;
         }
@@ -118,7 +119,7 @@
             margin-left: 15px;
         }
 
-        /* Search Input Styling */
+        /* Search Input */
         .search-container {
             position: relative;
         }
@@ -136,8 +137,8 @@
         }
 
         .search-container input:focus {
-            border-color: #f7a322;
-            box-shadow: 0 0 10px rgba(247, 163, 34, 0.1);
+            border-color: #fff;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
         }
 
         .search-container i {
@@ -149,7 +150,7 @@
             font-size: 0.9rem;
         }
 
-        /* --- Grid Layout --- */
+        /* --- Member Cards --- */
         .grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -171,24 +172,22 @@
         }
 
         .member-card.hidden { display: none; }
-        .member-card.founder { border-color: #f7a32240; }
-        .member-card.leader { border-color: #e74c3c40; }
-        .member-card.member { border-color: #ffffff08; }
 
         .member-card:hover {
-            background-color: rgba(22, 22, 22, 0.95);
+            background-color: rgba(255, 255, 255, 0.03);
             transform: translateY(-3px);
-            border-color: #555;
+            border-color: #444;
         }
 
         .avatar-container {
             position: relative;
-            width: 60px;
-            height: 60px;
+            width: 65px;
+            height: 65px;
             flex-shrink: 0;
             border-radius: 8px;
             border: 1px solid #222;
             overflow: hidden;
+            background: #111;
         }
 
         .member-avatar {
@@ -197,31 +196,18 @@
             background-image: url('https://img5.pic.in.th/file/secure-sv1/Untitled-2b13b6916ef20d67c.png');
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        /* สไตล์พิเศษสำหรับ Coming Soon */
-        .coming-soon-avatar {
-            background-image: none;
-            background-color: #111;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #333;
-            font-size: 1.2rem;
         }
 
         .status-dot {
             position: absolute;
-            bottom: 3px;
-            right: 3px;
-            width: 8px;
-            height: 8px;
-            background-color: #2ecc71;
+            bottom: 4px;
+            right: 4px;
+            width: 10px;
+            height: 10px;
+            background-color: #ffffff;
             border-radius: 50%;
-            border: 1.5px solid #0d0d0d;
-            box-shadow: 0 0 5px #2ecc71;
-            z-index: 2;
+            border: 2px solid #0d0d0d;
+            box-shadow: 0 0 8px #ffffff;
         }
 
         .member-info {
@@ -231,22 +217,21 @@
         }
 
         .role-label {
-            font-size: 0.6rem;
+            font-size: 0.65rem;
             font-weight: 700;
             text-transform: uppercase;
             display: flex;
             align-items: center;
-            gap: 4px;
+            gap: 5px;
             margin-bottom: 2px;
+            color: #888;
         }
 
-        .founder-label { color: #f7a322; }
-        .leader-label { color: #e74c3c; }
-        .member-label { color: #666; }
+        .founder-label { color: #fff; text-shadow: 0 0 5px rgba(255,255,255,0.3); }
 
         .member-name {
             margin: 0;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             font-weight: 700;
             color: #fff;
             letter-spacing: 0.5px;
@@ -257,17 +242,20 @@
 
         .facebook-link {
             text-decoration: none;
-            color: #0084ff;
+            color: #555;
             font-size: 0.7rem;
             font-weight: 700;
-            margin-top: 4px;
+            margin-top: 5px;
+            transition: 0.2s;
         }
+
+        .facebook-link:hover { color: #fff; }
 
         .system-design {
             text-align: center;
             margin-top: 100px;
             font-size: 0.7rem;
-            color: #333;
+            color: #222;
             letter-spacing: 4px;
             text-transform: uppercase;
         }
@@ -285,10 +273,10 @@
 
     <div class="container">
         <div class="main-header">
-            <h1>JQLUES STYLE</h1>
+            <h1>BLACK WHITE</h1>
             <div class="sub-text">
                 <div class="line"></div>
-                <h2>JQLUSE MEMBERS</h2>
+                <h2>ROSTER / MEMBERS</h2>
                 <div class="line" style="background: linear-gradient(to right, #444, transparent);"></div>
             </div>
         </div>
@@ -303,99 +291,55 @@
                 <input type="text" id="memberSearch" placeholder="SEARCH MEMBERS..." onkeyup="searchFunction()">
             </div>
         </div>
-        <div class="grid" id="founderGrid">
-            <div class="member-card founder">
-                <div class="avatar-container"><div class="member-avatar"></div><div class="status-dot"></div></div>
-                <div class="member-info">
-                    <span class="role-label founder-label"><i class="fas fa-crown"></i> FOUNDER</span>
-                    <h4 class="member-name">Zigar Jqluse</h4>
-                    <a href="https://www.facebook.com/zigar.Dereck.2024?locale=th_TH" target="_blank" class="facebook-link">Facebook</a>
-                </div>
-            </div>
-            <div class="member-card founder">
-                <div class="avatar-container"><div class="member-avatar"></div><div class="status-dot"></div></div>
-                <div class="member-info">
-                    <span class="role-label founder-label"><i class="fas fa-crown"></i> FOUNDER</span>
-                    <h4 class="member-name">Oshi Jqluse</h4>
-                    <a href="https://www.facebook.com/tsumaki.tsunaji.342?locale=th_TH" target="_blank" class="facebook-link">Facebook</a>
-                </div>
-            </div>
-            <div class="member-card founder">
-                <div class="avatar-container"><div class="member-avatar"></div><div class="status-dot"></div></div>
-                <div class="member-info">
-                    <span class="role-label founder-label"><i class="fas fa-crown"></i> FOUNDER</span>
-                    <h4 class="member-name">Fix Jqluse</h4>
-                    <a href="https://www.facebook.com/dept.banchamek?locale=th_TH" target="_blank" class="facebook-link">Facebook</a>
-                </div>
-            </div>
-            <div class="member-card founder">
-                <div class="avatar-container"><div class="member-avatar"></div><div class="status-dot"></div></div>
-                <div class="member-info">
-                    <span class="role-label founder-label"><i class="fas fa-crown"></i> FOUNDER</span>
-                    <h4 class="member-name">Patrick Jqluse</h4>
-                    <a href="https://www.facebook.com/patrickdereck2k26?locale=th_TH" target="_blank" class="facebook-link">Facebook</a>
-                </div>
-            </div>
-        </div>
 
-        <div class="section-wrapper">
-            <div class="section-header">
-                <h3>LEADERS</h3>
-                <span>/ 02</span>
-            </div>
-        </div>
-        <div class="grid" id="leaderGrid">
-            <div class="member-card leader">
-                <div class="avatar-container"><div class="member-avatar"></div><div class="status-dot"></div></div>
+        <div class="grid" id="founderGrid">
+            <div class="member-card">
+                <div class="avatar-container">
+                    <div class="member-avatar"></div>
+                    <div class="status-dot"></div>
+                </div>
                 <div class="member-info">
-                    <span class="role-label leader-label"><i class="fas fa-crown"></i> LEADER</span>
-                    <h4 class="member-name">Kanompiee Jqluse</h4>
-                    <a href="https://www.facebook.com/nongkanom.gml" target="_blank" class="facebook-link">Facebook</a>
+                    <span class="role-label founder-label"><i class="fas fa-crown"></i> FOUNDER</span>
+                    <h4 class="member-name">Oshi Blackwhite</h4>
+                    <a href="https://www.facebook.com/tsumaki.tsunaji.342" target="_blank" class="facebook-link"><i class="fab fa-facebook"></i> CONTACT</a>
                 </div>
             </div>
-            <div class="member-card leader">
-                <div class="avatar-container"><div class="member-avatar"></div><div class="status-dot"></div></div>
-                <div class="member-info">
-                    <span class="role-label leader-label"><i class="fas fa-crown"></i> LEADER</span>
-                    <h4 class="member-name">Pakkad Jqluse</h4>
-                    <a href="https://www.facebook.com/iisawakojang" target="_blank" class="facebook-link">Facebook</a>
-                </div>
+            
             </div>
-        </div>
 
         <div class="section-wrapper">
             <div class="section-header">
                 <h3>MEMBERS</h3>
-                <span>/ 03</span>
+                <span>/ 02</span>
             </div>
         </div>
         <div class="grid" id="memberGrid">
-            <div class="member-card member">
+            <div class="member-card">
                 <div class="avatar-container">
-                    <div class="member-avatar coming-soon-avatar"><i class="fas fa-user-plus"></i></div>
+                    <div style="display:flex; align-items:center; justify-content:center; height:100%; color:#222;"><i class="fas fa-user-secret fa-2x"></i></div>
                 </div>
                 <div class="member-info">
-                    <span class="role-label member-label">MEMBER</span>
-                    <h4 class="member-name">COMING SOON</h4>
-                    <span style="font-size: 0.7rem; color: #333;">Waiting for update...</span>
+                    <span class="role-label">MEMBER</span>
+                    <h4 class="member-name">WAITING...</h4>
+                    <span style="font-size: 0.6rem; color: #222;">DATABASE UPDATING</span>
                 </div>
             </div>
         </div>
 
-        <div class="system-design">SYSTEM DESIGN BY OSHI</div>
+        <div class="system-design">DESIGNED BY BLACK WHITE TEAM</div>
     </div>
 
     <script>
         function createRain() {
             const container = document.getElementById('rainContainer');
-            const dropCount = 100;
+            const dropCount = 80;
             for (let i = 0; i < dropCount; i++) {
                 const drop = document.createElement('div');
                 drop.classList.add('drop');
                 drop.style.left = Math.random() * 100 + 'vw';
-                drop.style.animationDuration = (Math.random() * 0.5 + 0.5) + 's';
+                drop.style.animationDuration = (Math.random() * 0.7 + 0.5) + 's';
                 drop.style.animationDelay = Math.random() * 2 + 's';
-                drop.style.opacity = Math.random() * 0.2;
+                drop.style.opacity = Math.random() * 0.15;
                 container.appendChild(drop);
             }
         }
@@ -404,17 +348,15 @@
             const input = document.getElementById('memberSearch');
             const filter = input.value.toUpperCase();
             const cards = document.getElementsByClassName('member-card');
-
             for (let i = 0; i < cards.length; i++) {
                 const name = cards[i].getElementsByClassName('member-name')[0];
-                if (name.innerText.toUpperCase().indexOf(filter) > -1) {
+                if (name && name.innerText.toUpperCase().indexOf(filter) > -1) {
                     cards[i].classList.remove('hidden');
                 } else {
                     cards[i].classList.add('hidden');
                 }
             }
         }
-
         createRain();
     </script>
 </body>
